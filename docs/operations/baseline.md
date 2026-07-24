@@ -12,10 +12,15 @@ revision `31d1e449`; this differs from predecessor repository main.
 
 ## Content
 
-Live PostgreSQL has 67 notes: 53 public/live, 4 private/live, 9 public/deleted,
-and 1 private/deleted. It has 2,468 note snapshots (2,121 public, 347 private),
-with no orphan, duplicate `(resource,snapshot_number)`, or ID collision found.
-All 91 resources and 2,495 snapshots use valid 26-character lowercase IDs.
+Live PostgreSQL is an older singleton schema: one `admin_user`, no live
+space/membership tables, and no migration ledger table were observed. The
+migration contract requires mapping that owner transactionally to the first
+successor owner and personal space.
+
+It has 67 notes: 53 public/live, 4 private/live, 9 public/deleted, and 1
+private/deleted. It has 2,468 note snapshots (2,121 public, 347 private), with
+no orphan, duplicate `(resource,snapshot_number)`, or ID collision found. All
+91 resources and 2,495 snapshots use valid 26-character lowercase IDs.
 
 There are 15 live media resources totaling 237,016,792 declared bytes. The
 predecessor data directory uses about 213 MiB allocated; PostgreSQL about 26

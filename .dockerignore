@@ -1,0 +1,16 @@
+.git
+.github
+.env
+.env.*
+!.env.example
+var
+data
+backups
+exports
+projection
+target
+coverage
+node_modules
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

@@ -13,9 +13,13 @@ Last evidence update: 2026-07-25T00:00:00Z.
   allocation-free scalar baseline JIT are Current on their documented subset.
   Strings, references, allocation, collections, and host I/O remain outside
   that native subset; this cycle uses the VM and does not extend the JIT.
-- The remaining generic web work is lossless bulk bytes, efficient host I/O,
-  SQLite, and reusable HTTP/application libraries. No application contract has
-  changed yet.
+- The generic runtime now has lossless bulk bytes, OS random fill, SHA-256,
+  bounded buffer slices, and SQLite on `e7dc259bb9f7f38e9b2424d2dfb50ef78b0b9f76`.
+- `deps/lkjscript` and `deps/lkjweb` are exact Git submodules. The app's source
+  assembly uses dependency symlinks, not copied framework source; the framework
+  import smoke passes at `lkjweb` `72b3af622cb34a485ba234478036f3c1b5bdb94d`.
+- Candidate A product implementation has not begun; the smoke is dependency
+  evidence only, not a workflow or architecture result.
 
 ## Accepted Target
 

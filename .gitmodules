@@ -1,0 +1,6 @@
+[submodule "deps/lkjscript"]
+	path = deps/lkjscript
+	url = https://github.com/lkjsxc/lkjscript.git
+[submodule "deps/lkjweb"]
+	path = deps/lkjweb
+	url = https://github.com/lkjsxc/lkjweb.git

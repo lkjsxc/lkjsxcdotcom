@@ -4,6 +4,7 @@
 
 - [baseline.md](baseline.md): non-secret 2026-07-24 evidence.
 - [migration.md](migration.md): export/import fidelity and idempotency.
+- [export-format.md](export-format.md): deterministic restricted NDJSON manifest.
 - [deployment.md](deployment.md): image, Compose, paths, and edge contract.
 - [backup-rollback.md](backup-rollback.md): safety and restoration.
 - [verification.md](verification.md): test tiers and evidence.

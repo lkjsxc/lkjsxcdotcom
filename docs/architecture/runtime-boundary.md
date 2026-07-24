@@ -2,10 +2,15 @@
 
 ## Current evidence
 
-`lkjscript` main `13a718e24a24` has typed `.lkjscript`, a bytecode VM, narrow
-synchronous file/TCP/time/buffer operations, and a one-shot HTTP example. It
-has no SQLite, lossless bulk bytes, atomic durable filesystem operations, or
-multi-connection HTTP server capability.
+`lkjscript` main `3a28e2e3fc2b` has typed `.lkjscript`, a bytecode VM, and
+narrow synchronous file/TCP/time/buffer operations. Typed SSA and a callable,
+allocation-free scalar baseline JIT are Current on their exact supported subset.
+Strings, references, allocation, collections, and host I/O are outside that
+subset, so Candidate A uses the VM and this cycle does not extend the JIT.
+
+The relevant generic blockers remain lossless bulk bytes, efficient host I/O,
+SQLite, and reusable HTTP/application libraries. The JIT is not evidence of web
+acceleration.
 
 ## Accepted Target
 

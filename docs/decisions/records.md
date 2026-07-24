@@ -2,7 +2,16 @@
 
 ## Current
 
-No implementation decision has been accepted.
+No architecture-selection decision has been accepted.
+
+### Lkjweb extraction — Accepted Target
+
+`lkjweb` will be a separate public Apache-2.0 repository extracted from the
+Candidate A application. It owns bounded reverse-proxy-oriented HTTP behavior,
+not application policy. Before 1.0 it makes no compatibility promise; consumers
+pin an exact commit. It has explicit limits and errors, no TLS or HTTP/2, and
+no hidden policy. The application keeps auth, storage, routes, rendering, and
+migration behavior.
 
 ## Accepted process
 

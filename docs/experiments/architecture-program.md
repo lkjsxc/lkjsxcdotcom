@@ -33,4 +33,7 @@ compression, and one/multiple workers where correct.
 
 ## Current result
 
-No candidate has been implemented or measured. No architecture is selected.
+Candidate A is the active implementation experiment. It has not yet been
+implemented or measured, is not selected, and production cutover remains
+blocked. Candidates B and C remain unimplemented; Candidate D remains justified
+only by later evidence.

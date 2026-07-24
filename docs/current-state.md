@@ -1,6 +1,6 @@
 # Current State
 
-Last evidence update: 2026-07-24T13:36:22Z.
+Last evidence update: 2026-07-25T00:00:00Z.
 
 ## Current
 
@@ -9,15 +9,20 @@ Last evidence update: 2026-07-24T13:36:22Z.
   Docker image, runtime pin, test suite, export, import, green deployment, or
   production cutover.
 - Live `lkjsxc.com` still reaches `kjxlkj` through edge Nginx.
-- `lkjscript` main was `13a718e24a24` when inspected. It has a typed bytecode
-  VM and narrow synchronous file/TCP primitives, but lacks SQLite, lossless
-  bulk bytes, atomic durable file operations, and a general HTTP server.
+- `lkjscript` main is `3a28e2e3fc2b`. Typed SSA and its callable,
+  allocation-free scalar baseline JIT are Current on their documented subset.
+  Strings, references, allocation, collections, and host I/O remain outside
+  that native subset; this cycle uses the VM and does not extend the JIT.
+- The remaining generic web work is lossless bulk bytes, efficient host I/O,
+  SQLite, and reusable HTTP/application libraries. No application contract has
+  changed yet.
 
 ## Accepted Target
 
 The product and operational contracts in this documentation tree are accepted
-as implementation targets. Architecture remains unselected until the three
-real vertical slices and their measurements meet
+as implementation targets. Candidate A is the active implementation experiment,
+not the selected architecture. Candidates B and C remain unimplemented;
+production cutover is blocked on later comparative evidence under the
 [experiment gates](experiments/architecture-program.md).
 
 ## Evidence boundaries
@@ -31,7 +36,7 @@ timed out; local and edge-loopback probes are recorded in
 
 ## Next verified work
 
-1. Commit this docs bootstrap.
-2. Add a small vertical slice against the current runtime and document actual
-   generic capability gaps.
-3. Implement and measure all eligible architecture candidates before adoption.
+1. Commit this continuation correction.
+2. Attempt the Candidate A HTTP slice on the VM and document actual generic
+   byte, socket, SQLite, and framework capability gaps.
+3. Build and measure Candidate A before implementing the remaining candidates.

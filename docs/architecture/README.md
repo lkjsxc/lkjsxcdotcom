@@ -4,6 +4,7 @@
 
 - [runtime-boundary.md](runtime-boundary.md): `.lkjscript` versus generic Rust.
 - [storage.md](storage.md): required durable-store semantics.
+- [schema.md](schema.md): migration-ledger entities and secret boundaries.
 - [projection.md](projection.md): derived public tree safety.
 - [http.md](http.md): bounded internal HTTP contract.
 
